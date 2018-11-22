@@ -9,16 +9,11 @@
 
 //constructors and destructors
 Item::Item() {
-	std::cout << "Default constructor for Item" << std::endl;
+
 }
 
 Item::Item(std::string itemName, int itemValue, float itemWeight)
 	:itemName_{ itemName }, itemValue_{ itemValue }, itemWeight_{ itemWeight } {
-	std::cout << "Custom constructor for Item 1" << std::endl;
-}
-
-Item::~Item() {
-	std::cout << "Default destructor for Item" << std::endl;
 }
 
 //getters and setters
@@ -46,6 +41,7 @@ float Item::GetItemWeight() {
 	return itemWeight_;
 }
 
+//converts item variables to a string
 std::string Item::ToString() {
 	std::string itemNameString = GetItemName();
 	std::string itemValueString = std::to_string(GetItemValue());

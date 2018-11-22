@@ -4,8 +4,6 @@
 //Date: 20/11/2018
 
 #pragma once
-#include <iostream>
-#include <string>
 
 class Item {
 private:
@@ -18,7 +16,6 @@ public:
 	//constructor and destructors
 	Item();
 	Item(std::string itemName, int itemValue, float itemWeight);
-	~Item();
 	std::string ToString();
 
 	//getters and setters

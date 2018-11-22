@@ -5,26 +5,19 @@
 
 #include <iostream>
 #include <string>
-#include "Weapon.h"
 #include "GameCharacter.h"
-#include "Armour.h"
 
-#include "Item.h"
-
+//contructors and destructors
 GameCharacter::GameCharacter() {
 	std::string characterName_ = "New character";
 	float health_ = 0;
 	float weightLimit_ = 0;
 	weapon_ = Weapon{ "New weapon", 0, 0, 0, 0 };
-	armour_ = Armour{ "New armour", 0, 0, 0, 0, Leather };
+	armour_ = Armour{ "New armour", 0, 0, 0, 0, Cardboard };
 	int food_ = 0;
 	CharacterState { Idle };
 
 	std::cout << "New character: " << characterName_ << " has been born!" << std::endl;
-}
-
-GameCharacter::~GameCharacter() {
-	std::cout << "Default destructor for GameCharacter" << std::endl;
 }
 
 GameCharacter::GameCharacter(std::string characterName, float health, float weightLimit, Weapon weapon, Armour armour, int food, CharacterState state)
@@ -32,18 +25,15 @@ GameCharacter::GameCharacter(std::string characterName, float health, float weig
 	std::cout << "Base GameCharacter called...... " << characterName_ << " has been born!" << std::endl;
 }
 
-
-
 bool GameCharacter::Attack(GameCharacter &character) {
-	std::cout << characterName_ << " is attacking " << character.GetCharacterName() << " with a " << weapon_.GetItemName() << 
-		" and armour made from " << armour_.GetArmourType() << std::endl;
+	std::cout << characterName_ << " is attacking " << character.GetCharacterName() << " with a " << weapon_.GetItemName() << std::endl;
 	state_ = Attacking;
 	character.Defend();
 	return false;
 }
 
 void GameCharacter::Defend() {
-	std::cout << characterName_ << " is defending using " << armour_.GetItemName() <<
+	std::cout << characterName_ << " is defending themselves with a  " << armour_.GetItemName() <<
 		" made from " << armour_.GetArmourType() << std::endl;
 	state_ = Defending;
 }
@@ -63,15 +53,11 @@ void GameCharacter::Sleep() {
 	std::cout << characterName_ << " is " << state_;
 }
 
-//void CharacterState::GetState() {		///is this void???????????????????????
-//	//TODO
-//}
-
 void GameCharacter::AddFood(int amount) {
 	amount = food_ + food_;
 }
 
-void GameCharacter::Eat() {
+void GameCharacter::Eat() {							//character eats food, adds health, -1 from food available
 	for (int i = 0; i < 4; i++) {
 		if (food_ > 0) {
 			AddFood(-1);

@@ -10,12 +10,12 @@
 
 //constructors and destructors
 Weapon::Weapon() {
-	std::cout << "Default constructor for Weapon" << std::endl;
+	
 }
 
 Weapon::Weapon(std::string weaponName, int itemValue, float itemWeight, int weaponHitStrength, int weaponHealth)
 	: Item{ weaponName, itemValue, itemWeight }, weaponHitStrength_{ weaponHitStrength }, weaponHealth_{ weaponHealth } {
-	std::cout << "Constructor for Weapon 1" << std::endl;
+	
 }
 
 //getters and setters
@@ -35,6 +35,7 @@ int Weapon::GetWeaponHealth() {
 	return weaponHealth_;
 }
 
+//converts weapon variables to a string
 std::string Weapon::ToString() {
 	std::string weaponNameString = GetItemName();
 	std::string weaponValueString = std::to_string(GetItemValue());

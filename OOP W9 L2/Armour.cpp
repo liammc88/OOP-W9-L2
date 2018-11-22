@@ -1,4 +1,4 @@
-//Armmour.cpp
+//Armour.cpp
 //Description: definition for Armour class
 //Author: Liam McCormick
 //Date: 20/11/2018
@@ -9,13 +9,12 @@
 #include "Item.h"
 
 //constructors and destructors
-Armour::Armour() {
-	std::cout << "Default constructor for Armour" << std::endl;
+Armour::Armour() 
+	: Item({ "Armour", 0, 0.0f }), armourDefence_{ 0 }, armourHealth_{ 0 }, armourType_{ Cardboard } {
 }
 
 Armour::Armour(std::string armourName, int itemValue, float itemWeight, int armourDefence, int armourHealth, ArmourType armourType)
 	: Item{ armourName, itemValue, itemWeight }, armourDefence_{ armourDefence }, armourHealth_{ armourHealth }, armourType_{ armourType } {
-	std::cout << "Constructor for Armour 1" << std::endl;
 }
 
 //getters and setters
@@ -43,7 +42,7 @@ int Armour::GetArmourType() {
 	return armourType_;
 }
 
-//ADD ARMOUR TYPE GET AND SET
+//converts armour variables to a string
 std::string Armour::ToString() {
 	std::string armourNameString = GetItemName();
 	std::string armourValueString = std::to_string(GetItemValue());

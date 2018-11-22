@@ -4,8 +4,6 @@
 //Date: 20/11/2018
 
 #pragma once
-#include <iostream>
-#include <string>
 #include "Armour.h"
 #include "Weapon.h"
 
@@ -22,8 +20,8 @@ private:
 	CharacterState state_;
 
 public:
+	//constructors and destructors
 	GameCharacter();
-	~GameCharacter();
 	GameCharacter(std::string characterName, float health, float weightLimit, Weapon weapon, Armour armour, int food, CharacterState state);
 
 	bool Attack(GameCharacter &character);
@@ -31,10 +29,10 @@ public:
 	void Walk();
 	void Run();
 	void Sleep();
-	//void GetState();
 	void AddFood(int amount);
 	void Eat();
 
+	//getters and setters
 	void SetCharacterName(std::string characterName);
 	std::string GetCharacterName();
 
