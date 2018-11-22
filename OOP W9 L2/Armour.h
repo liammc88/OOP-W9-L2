@@ -25,7 +25,7 @@ public:
 	int GetArmourDefence();
 	void SetArmourHealth(int armourHealth);
 	int GetArmourHealth();
-	void SetArmourType(int armourType);
+	void SetArmourType(ArmourType armourType);
 	int GetArmourType();
 	std::string ToString();
 };

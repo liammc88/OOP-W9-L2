@@ -35,7 +35,7 @@ int Armour::GetArmourHealth() {
 	return armourHealth_;
 }
 
-void Armour::SetArmourType(int armourType) {
+void Armour::SetArmourType(ArmourType armourType) {
 	armourType_ = armourType;
 }
 
