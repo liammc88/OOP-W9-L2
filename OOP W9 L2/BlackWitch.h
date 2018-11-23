@@ -5,6 +5,7 @@
 
 #pragma once
 #include"GameCharacter.h"
+#include "Weapon.h"
 
 class BlackWitch : public GameCharacter {
 private:
@@ -22,4 +23,5 @@ public:
 
 	void Bewitch(GameCharacter &character);
 	void Sleep();
+	virtual bool Attack(GameCharacter &character);
 };

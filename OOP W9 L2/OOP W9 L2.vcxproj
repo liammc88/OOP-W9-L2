@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Armour.cpp" />
+    <ClCompile Include="BlackWitch.cpp" />
     <ClCompile Include="GameCharacter.cpp" />
     <ClCompile Include="Item.cpp" />
     <ClCompile Include="Main.cpp" />
