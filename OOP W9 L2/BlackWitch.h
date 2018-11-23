@@ -22,6 +22,6 @@ public:
 	int GetDarkPower();
 
 	void Bewitch(GameCharacter &character);
-	void Sleep();
+	virtual void Sleep();
 	virtual bool Attack(GameCharacter &character);
 };

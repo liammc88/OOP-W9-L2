@@ -12,7 +12,7 @@ BlackWitch::BlackWitch() {
 	SetCharacterName("New witch");
 	SetCharacterHealth(100);
 	SetCharacterWeightLimit(0.0f);
-	SetWeapon(Weapon{ "New weapon", 0, 0.0f,0, 100 });
+	SetWeapon(Weapon{ "New weapon", 0, 0.0f, 0, 100 });
 	SetFood(0);
 	SetState(CharacterState{ Idle });
 	SetMagicProficiency(0);
@@ -57,4 +57,5 @@ void BlackWitch::Sleep() {
 
 bool BlackWitch::Attack(GameCharacter &character) {
 	std::cout << "Black witch is attacking " << character.GetCharacterName() << " with a " << std::endl; //weapon_.GetItemName() << std::endl;
+	return true;
 }
