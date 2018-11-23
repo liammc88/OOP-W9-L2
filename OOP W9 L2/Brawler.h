@@ -22,6 +22,6 @@ public:
 	int GetStrength();
 
 	void Brawl(GameCharacter &character);
-	void Sleep();
+	virtual void Sleep();
 	virtual bool Attack(GameCharacter &character);
 };

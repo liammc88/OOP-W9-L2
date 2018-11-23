@@ -44,7 +44,7 @@ int Brawler::GetStrength() {
 }
 
 void Brawler::Brawl(GameCharacter &character) {
-	std::cout << "Black witch " << GetCharacterName() << " is brawling " << character.GetCharacterName() << std::endl;
+	std::cout << "Brawler " << GetCharacterName() << " is brawling " << character.GetCharacterName() << std::endl;
 }
 
 void Brawler::Sleep() {
@@ -53,7 +53,7 @@ void Brawler::Sleep() {
 	if (GetCharacterHealth() < 100.0f) {
 		SetCharacterHealth(currentHealth = currentHealth * 1.15f);
 	}
-	std::cout << " Brawler is sleeping" << std::endl;
+	std::cout << "Brawler is sleeping" << std::endl;
 }
 
 bool Brawler::Attack(GameCharacter &character) {

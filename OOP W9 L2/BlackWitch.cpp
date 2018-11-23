@@ -52,7 +52,7 @@ void BlackWitch::Sleep() {
 	if (GetCharacterHealth() < 100.0f) {
 		SetCharacterHealth(currentHealth = currentHealth * 1.15f);
 	}
-	std::cout << " Black witch is sleeping" << std::endl;
+	std::cout << "Black witch is sleeping" << std::endl;
 }
 
 bool BlackWitch::Attack(GameCharacter &character) {
